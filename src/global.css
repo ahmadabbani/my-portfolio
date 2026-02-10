@@ -313,8 +313,8 @@ p {
     align-items: center;
 }
 
-.hero-name span {
-    margin-left: 30px;
+.hero-lname {
+    display: block;
 }
 
 .hero-subtitle {
@@ -448,16 +448,24 @@ p {
 }
 
 /* 2. Tablet / Small Laptop (Below 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .hero-container {
         grid-template-columns: 1fr;
         /* Stack vertically */
         padding-top: 100px;
-        gap: 3rem;
+        gap: 2.5rem;
     }
 
     .hero-content {
         text-align: left;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 1rem;
+    }
+
+    .hero-lname {
+        display: inline;
     }
 }
 
@@ -478,7 +486,7 @@ p {
 
 .about-headline {
     text-align: center;
-    margin-bottom: var(--section-spacing);
+    margin-bottom: 2.5rem;
     display: inline-block;
     width: 100%;
     /* Ensures H2 scaling from typography rules is applied */
@@ -526,6 +534,12 @@ p {
 }
 
 /* Responsive Fixes for About Section */
+@media (min-width: 1550px) {
+    .about-headline {
+        margin-bottom: 3.5rem;
+    }
+}
+
 @media (min-width: 2100px) {
     .about-widget {
         padding: 4.5rem;
@@ -537,10 +551,36 @@ p {
 }
 
 @media (max-width: 1024px) {
+    .about-widget {
+        padding: 2rem;
+    }
+
+    .widget-label {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .widget-quote {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
     .about-body {
         grid-template-columns: 1fr;
-        /* Stack columns on tablet/mobile */
-        gap: 3rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .about-text-column p {
+        margin-bottom: 1rem;
+        font-size: clamp(1.1rem, 1.4vw, 1.6rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-widget {
+        padding: 1.2rem;
     }
 }
 
@@ -562,7 +602,7 @@ p {
 .section-title {
     /* This uses the H1 styling but ensures it's centered and has spacing */
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     width: 100%;
 }
 
@@ -636,6 +676,10 @@ p {
 
 /* Responsive Fixes for Skills Section */
 @media (min-width: 1550px) {
+    .section-title {
+        margin-bottom: 3.5rem;
+    }
+
     .skills-summary {
         max-width: 1100px;
     }
@@ -724,8 +768,8 @@ p {
 .card-flower-wrapper {
     position: relative;
     width: 100%;
-    max-width: 450px;
-    height: 450px;
+    max-width: 400px;
+    height: 400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -808,10 +852,17 @@ p {
     }
 }
 
+@media (max-width: 1200px) {
+    .card-flower-wrapper {
+        max-width: 350px;
+        height: 350px;
+    }
+}
+
 @media (max-width: 1024px) {
     .projects-container {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 5rem;
     }
 
     .projects-title {
@@ -828,12 +879,29 @@ p {
         align-items: center;
     }
 
-    .card-flower-wrapper {
-        height: 350px;
-    }
-
     .project-card {
         width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .card-flower-wrapper {
+        max-width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 490px) {
+    .card-flower-wrapper {
+        max-width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 425px) {
+    .card-flower-wrapper {
+        max-width: 200px;
+        height: 200px;
     }
 }
 
@@ -986,13 +1054,37 @@ p {
 
 @media (min-width: 2250px) {
     .contact-panel-link {
-        max-width: 1400px;
+        max-width: 1600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-section {
+        padding: 3rem 5%;
+        padding-bottom: 6rem;
+    }
+
+    .contact-section .container {
+        width: 85%;
     }
 }
 
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 5%;
+        padding-bottom: 5rem;
+    }
+
+    .contact-section .container {
+        width: 95%;
+    }
+
     .contact-panel {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-paragraph {
+        margin: 0 auto 2rem auto;
     }
 }
 
@@ -1515,6 +1607,10 @@ p {
 }
 
 @media (max-width: 600px) {
+    .contact-page-section {
+        padding-bottom: 2rem;
+    }
+
     .contact-widget {
         width: 100%;
         /* Stack widgets fully on narrow screens */
@@ -2086,7 +2182,7 @@ p {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .projects-gap-grid {
         grid-template-columns: 1fr;
     }
@@ -2107,18 +2203,18 @@ p {
     .project-card-image-wrapper {
         flex: unset;
         width: 100%;
-        height: 350px;
+        height: 400px;
     }
+
 }
 
 @media (max-width: 768px) {
-    .projects-gap-grid {
-        width: 100%;
-        gap: 2rem;
-    }
-
     .projects-main-title {
         font-size: 3.5rem;
+    }
+
+    .project-card-content {
+        padding: 1.5rem;
     }
 
     .modal-content {
@@ -2135,4 +2231,20 @@ p {
     .modal-image-container {
         margin-top: 1.5rem;
     }
+
+
+    .project-card-image-wrapper {
+        height: 265px;
+    }
+
+    .project-card-image {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 425px) {
+    .project-card-image-wrapper {
+        height: 200px;
+    }
+
 }

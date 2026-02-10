@@ -7,6 +7,7 @@ import {
   FiInstagram,
   FiArrowRight,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Variants for sequential appearance of main sections
 const containerVariants = {
@@ -41,9 +42,22 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: FiGithub, href: "https://github.com" },
-  { icon: FiLinkedin, href: "https://linkedin.com" },
-  { icon: FiInstagram, href: "https://instagram.com" },
+  {
+    icon: FiLinkedin,
+    href: "https://www.linkedin.com/in/ahmad-abbany-992660258",
+  },
+  {
+    icon: FiGithub,
+    href: "https://github.com/ahmadabbani",
+  },
+  {
+    icon: FiInstagram,
+    href: "https://www.instagram.com/ahmddabb/",
+  },
+  {
+    icon: FaWhatsapp,
+    href: "https://wa.me/96176585971",
+  },
 ];
 
 const Footer = () => {
@@ -260,6 +274,8 @@ const Footer = () => {
                 key={index}
                 href={item.href}
                 className="footer-social-btn glass-panel"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <item.icon size={22} />
               </a>

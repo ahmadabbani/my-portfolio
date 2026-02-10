@@ -49,7 +49,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1 variants={itemVariants} className="hero-name">
-            Ahmad <br /> <span>Abbani</span>
+            Ahmad <span className="hero-lname">Abbani</span>
           </motion.h1>
 
           <motion.h2 variants={itemVariants} className="hero-role">
@@ -70,7 +70,12 @@ const Hero = () => {
           <div className="widget-body">
             <div className="info-group">
               <label>Phone</label>
-              <a href="tel:+96176585971" className="info-link">
+              <a
+                href="https://wa.me/96176585971"
+                className="info-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 +961 76 585 971
               </a>
             </div>
@@ -90,16 +95,36 @@ const Hero = () => {
 
           <div className="widget-footer">
             <div className="social-row">
-              <a href="#" className="social-btn">
+              <a
+                href="https://www.linkedin.com/in/ahmad-abbany-992660258"
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="social-btn">
+              <a
+                href="https://github.com/ahmadabbani"
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub />
               </a>
-              <a href="#" className="social-btn">
+              <a
+                href="https://www.instagram.com/ahmddabb/"
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="social-btn">
+              <a
+                href="https://wa.me/96176585971"
+                className="social-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaWhatsapp />
               </a>
             </div>
