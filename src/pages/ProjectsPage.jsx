@@ -16,7 +16,7 @@ const projectsData = [
       The website’s contemporary
      design reflects the company’s brand while providing an engaging and informative experience for visitors.`,
     stack: ["react.png", "motion.svg"],
-    image: "eps.png",
+    image: "eps00.jpg",
     liveUrl: "https://electric-power-solution.com/",
   },
   {
@@ -27,7 +27,7 @@ const projectsData = [
 The platform also features a Careers section, where users can view open positions and submit applications directly, including CV uploads and relevant details.
 Powered by Supabase for backend services, authentication, and database management. A secure, role-based admin dashboard allows administrators to fully manage the portfolio (add, edit, and delete projects), manage career listings (create, update, and remove positions), and review and manage job applications submitted by users. The system also supports admin user management, including creating new admin accounts.`,
     stack: ["react.png", "motion.svg", "supabase.png"],
-    image: "mediaex.png",
+    image: "mediaex00.png",
     liveUrl: "https://mediaex-agency.com/",
   },
   {
@@ -53,7 +53,7 @@ Powered by Supabase for backend services, authentication, and database managemen
       "railway.png",
       "postgres.png",
     ],
-    image: "mourachah.png",
+    image: "mourachah00.png",
     liveUrl: "https://almourachah.org/",
   },
   {
@@ -81,7 +81,7 @@ The system is built with PHP, MySQL, JavaScript, and integrates Stripe for secur
                 dynamic projects page with advanced filtering and detailed
                 project pages (with galleries and rich information).`,
     stack: ["react.png", "tailwind.png", "motion.svg"],
-    image: "hrajel.png",
+    image: "hrajel00.png",
     liveUrl: "https://hhd-lb.org",
   },
   {
@@ -90,7 +90,7 @@ The system is built with PHP, MySQL, JavaScript, and integrates Stripe for secur
     category: "Full-Stack Web Application",
     fullDesc: `Zaktalks is a Learning Management System (LMS) built for selling and managing online courses. The platform is developed using Next.js with Supabase for authentication, database, and cloud services. It includes a secure authentication system allowing users to register and log in, with automated email notifications for account and system actions. The platform supports a flexible discount system, including coupons, points-based discounts, and first-purchase discounts, all automatically applied based on user eligibility. Users can purchase courses and complete payments through Stripe, with secure online transactions and automated emails confirming purchases and related actions. Each user has a dashboard displaying enrolled courses, course progress, lesson tracking, assessments, and certificates generated upon course completion. Course content is structured into modules and lessons, with progress tracking at the lesson level. Assessments are integrated to evaluate user progress throughout the course. The platform includes a full admin panel for managing courses, lessons, modules, assessments, users, payments, and discounts. Admins can create and update courses at any time, manage coupons and discount rules, control point systems, set first-purchase discounts, and monitor user activity and transactions. "The platform is currently under development and will be launched online soon."`,
     stack: ["nextjs.png", "supabase.png", "stripe.svg"],
-    image: "zaktalks.jpg",
+    image: "zaktalks000.jpg",
     liveUrl: "zaktalks.vercel.app",
   },
   {
@@ -161,7 +161,7 @@ The system is built with PHP, MySQL, JavaScript, and integrates Stripe for secur
      in a clean and visually engaging layout, reflecting AMPC’s brand identity while providing visitors with a clear
       understanding of the agency’s offerings and approach.`,
     stack: ["javascript.png", "php.png", "html.png", "css.png"],
-    image: "ampc.png",
+    image: "ampc00.jpg",
     liveUrl: "https://ampc-comms.com/",
   },
   {
@@ -173,7 +173,7 @@ In addition, the system includes a complete client contract registration workflo
  This system significantly improves sales coordination and makes the discussion and contracting process more efficient and manageable online.
 To enhance user experience, I utilized various libraries for interactive carousels, image displays, and modals, creating an intuitive and visually engaging platform.`,
     stack: ["javascript.png", "bootstrap.png", "php.png", "mysql.png"],
-    image: "analytics.png",
+    image: "analytics00.jpg",
     liveUrl: "https://Analytics-expertise.com/",
   },
 
@@ -191,7 +191,7 @@ To enhance user experience, I utilized various libraries for interactive carouse
                 message the admin directly while ensuring user safety and
                 authenticity.`,
     stack: ["javascript.png", "bootstrap.png", "php.png", "mysql.png"],
-    image: "sagesse.png",
+    image: "sagesse00.jpg",
     liveUrl: "https://ultras-sagesse.com/",
   },
   {
@@ -204,7 +204,7 @@ To enhance user experience, I utilized various libraries for interactive carouse
        The website is designed for clarity and ease of use,
      reflecting the restaurant’s brand while offering an interactive, user-friendly interface.`,
     stack: ["javascript.png", "html.png", "css.png"],
-    image: "alsafa.png",
+    image: "alsafa00.jpg",
     liveUrl: "https://alsafachicken.com/",
   },
   {
@@ -216,7 +216,7 @@ To enhance user experience, I utilized various libraries for interactive carouse
       it allows visitors to quickly understand the company’s offerings and mission, 
     while reflecting the brand’s identity in a professional and engaging way.`,
     stack: ["javascript.png", "html.png", "css.png"],
-    image: "health.png",
+    image: "health00.jpg",
     liveUrl: "https://healthcorner.com.lb/",
   },
   {
@@ -255,7 +255,7 @@ To enhance user experience, I utilized various libraries for interactive carouse
          The platform also allows users to remove favorites, update their account information, and customize their profile, including changing their avatar.
      React form validation is implemented to ensure data integrity and enhance the overall user experience.`,
     stack: ["react.png", "firebase.png", "nodejs.svg", "chakra.png"],
-    image: "netflix.png",
+    image: "netflix.jpg",
     liveUrl: "https://netflix-react-9af7f.web.app/",
   },
   {
@@ -303,7 +303,7 @@ The application is styled using Chakra UI, a simple, modular, and accessible com
                 project. It’s a testament to the power and flexibility of modern
                 web technologies.`,
     stack: ["react.png", "html.png", "css.png"],
-    image: "architect.png",
+    image: "architect.jpg",
     liveUrl: "https://ahmadabbani.github.io/React--Architect-Website/",
   },
   {
@@ -313,7 +313,7 @@ The application is styled using Chakra UI, a simple, modular, and accessible com
     fullDesc: `Streamlined News Hub: Simple, Appealing Design for Seamless
                 Reading Across Devices!`,
     stack: ["javascript.png", "html.png", "css.png"],
-    image: "news.png",
+    image: "news.jpg",
     liveUrl: "https://ahmadabbani.github.io/news-homepage-main/",
   },
   {
@@ -323,7 +323,7 @@ The application is styled using Chakra UI, a simple, modular, and accessible com
     fullDesc: `Dive into LoopStudios, a Simple, Appealing Design for Seamless
                 Reading Across Devices!`,
     stack: ["javascript.png", "html.png", "css.png"],
-    image: "loopstudio.png",
+    image: "loopstudio.jpg",
     liveUrl: "https://ahmadabbani.github.io/loop-studios-landing-page/",
   },
 ];
