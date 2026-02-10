@@ -9,28 +9,28 @@ const projects = [
     title: "01",
     category: "Full-Stack",
     bgColor: "rgba(255, 255, 255, 0.05)",
-    bgImage: "/assets/loopstudio.png",
+    bgImage: "/assets/ampc00.jpg",
   },
   {
     id: 2,
     title: "02",
     category: "Automation",
     bgColor: "rgba(255, 255, 255, 0.05)",
-    bgImage: "/assets/mediaex.png",
+    bgImage: "/assets/mediaex00.png",
   },
   {
     id: 3,
     title: "03",
     category: "Data & APIs",
     bgColor: "rgba(255, 255, 255, 0.05)",
-    bgImage: "/assets/architect.png",
+    bgImage: "/assets/bermuda.png",
   },
   {
     id: 4,
     title: "04",
     category: "UI/UX Design",
     bgColor: "rgba(255, 255, 255, 0.05)",
-    bgImage: "/assets/hrajel.png",
+    bgImage: "/assets/hrajel00.png",
   },
 ];
 // --- Animation Variants ---

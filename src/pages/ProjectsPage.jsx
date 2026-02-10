@@ -378,9 +378,7 @@ const ProjectsPage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          A curated gallery of engineering and design. From small business
-          platforms to complex enterprise ecosystems, every pixel serves a
-          purpose.
+          Web projects built with care for detail, performance, and user needs.
         </motion.p>
       </div>
 

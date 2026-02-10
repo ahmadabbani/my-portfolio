@@ -6,8 +6,9 @@ import {
   FiMapPin,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
+  FiInstagram,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Variants for sequential staggering entrance
 const containerVariants = {
@@ -71,15 +72,31 @@ const ContactPage = () => {
             {/* 1. Email Widget */}
             <ContactWidget
               icon={FiMail}
-              title="Primary Mail"
-              value="hello@yourdomain.com"
+              title="Email"
+              value={
+                <a
+                  href="mailto:ahmdabbanyy@gmail.com"
+                  className="info-link"
+                >
+                  ahmdabbanyy@gmail.com
+                </a>
+              }
             />
 
             {/* 2. Phone Widget */}
             <ContactWidget
               icon={FiPhone}
-              title="WhatsApp / Telegram"
-              value="+1 555 123 4567"
+              title="WhatsApp"
+              value={
+                <a
+                  href="https://wa.me/96176585971"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="info-link"
+                >
+                  +961 76 585 971
+                </a>
+              }
             />
 
             {/* 3. Location / Timezone Widget (The "Cool Stuff") */}
@@ -92,25 +109,36 @@ const ContactPage = () => {
             {/* 4. Social Media Widget (The "Cool Stuff" - Horizontal) */}
             <motion.div className="social-widgets-row" variants={itemVariants}>
               <a
-                href="https://github.com"
+                href="https://www.linkedin.com/in/ahmad-abbany-992660258"
                 target="_blank"
-                className="social-link glass-panel"
-              >
-                <FiGithub size={30} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
+                rel="noopener noreferrer"
                 className="social-link glass-panel"
               >
                 <FiLinkedin size={30} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://github.com/ahmadabbani"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="social-link glass-panel"
               >
-                <FiTwitter size={30} />
+                <FiGithub size={30} />
+              </a>
+              <a
+                href="https://www.instagram.com/ahmddabb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link glass-panel"
+              >
+                <FiInstagram size={30} />
+              </a>
+              <a
+                href="https://wa.me/96176585971"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link glass-panel"
+              >
+                <FaWhatsapp size={30} />
               </a>
             </motion.div>
           </div>

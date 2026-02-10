@@ -23,16 +23,25 @@ const containerVariants = {
 // Variants for individual link items and section containers
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: {
+  visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      delay: i * 0.1,
+    },
+  }),
 };
 
-// Variants for staggering the Big Nav Links themselves
+// Variants for staggering the Big Nav Links themselves (used for other sections if needed)
 const linkContainerVariants = {
-  visible: { transition: { staggerChildren: 0.08 } }, // Quick stagger between links
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
 };
 const navLinks = [
   { name: "Home", href: "/#hero", sectionId: null },
@@ -144,12 +153,8 @@ const Footer = () => {
       </AnimatePresence>
       <div className="container footer-content">
         {/* 3. Big Centered Nav Links */}
-        <motion.nav 
-          className="footer-nav" 
-          variants={linkContainerVariants}
-          animate="visible"
-        >
-          {navLinks.map((link) => {
+        <motion.nav className="footer-nav" variants={itemVariants}>
+          {navLinks.map((link, index) => {
             const isProjects = link.name === "Projects";
             const isHomeLink = link.name === "Home";
             const isSectionLink = link.name === "About" || link.name === "Skills";
@@ -158,26 +163,18 @@ const Footer = () => {
             if (isHomeLink) {
               if (isHome) {
                 return (
-                  <motion.a
-                    key={`${link.name}-home`}
+                  <a
+                    key={link.name}
                     href={link.href}
                     className="big-footer-link"
-                    variants={itemVariants}
-                    initial="visible"
-                    animate="visible"
                     onClick={(e) => handleFooterLinkClick(e, link)}
                   >
                     {link.name}
-                  </motion.a>
+                  </a>
                 );
               } else {
                 return (
-                  <motion.div
-                    key={`${link.name}-${location.pathname}`}
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                  >
+                  <div key={link.name}>
                     <Link
                       to="/"
                       className="big-footer-link"
@@ -185,7 +182,7 @@ const Footer = () => {
                     >
                       {link.name}
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               }
             }
@@ -194,26 +191,18 @@ const Footer = () => {
             if (isProjects) {
               if (isHome) {
                 return (
-                  <motion.a
-                    key={`${link.name}-home`}
+                  <a
+                    key={link.name}
                     href={link.href}
                     className="big-footer-link"
-                    variants={itemVariants}
-                    initial="visible"
-                    animate="visible"
                     onClick={(e) => handleFooterLinkClick(e, link)}
                   >
                     {link.name}
-                  </motion.a>
+                  </a>
                 );
               } else {
                 return (
-                  <motion.div
-                    key={`${link.name}-${location.pathname}`}
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                  >
+                  <div key={link.name}>
                     <Link
                       to="/projects"
                       className="big-footer-link"
@@ -221,7 +210,7 @@ const Footer = () => {
                     >
                       {link.name}
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               }
             }
@@ -230,26 +219,18 @@ const Footer = () => {
             if (isSectionLink) {
               if (isHome) {
                 return (
-                  <motion.a
-                    key={`${link.name}-home`}
+                  <a
+                    key={link.name}
                     href={link.href}
                     className="big-footer-link"
-                    variants={itemVariants}
-                    initial="visible"
-                    animate="visible"
                     onClick={(e) => handleFooterLinkClick(e, link)}
                   >
                     {link.name}
-                  </motion.a>
+                  </a>
                 );
               } else {
                 return (
-                  <motion.div
-                    key={`${link.name}-${location.pathname}`}
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                  >
+                  <div key={link.name}>
                     <Link
                       to={`/${link.sectionId}`}
                       className="big-footer-link"
@@ -257,7 +238,7 @@ const Footer = () => {
                     >
                       {link.name}
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               }
             }

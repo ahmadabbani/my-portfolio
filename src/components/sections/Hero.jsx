@@ -61,7 +61,7 @@ const Hero = () => {
         {/* 3. "Glass Widget" Contact Card */}
         <motion.div variants={itemVariants} className="hero-widget glass-panel">
           <div className="widget-header">
-            <h3>Contact Details</h3>
+            <h3>Contact</h3>
             <div className="status-indicator">
               <span className="pulse-dot"></span> Available
             </div>
