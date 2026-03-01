@@ -69,9 +69,7 @@ const About = () => {
             <div className="about-widget glass-panel">
               <span className="widget-label">Core Value</span>
               <p className="widget-quote">
-                "I focus on the seamless fusion of design and engineering,
-                ensuring every application is built for exceptional speed,
-                scalability, and precise automation."
+                "I emphasize clean system architecture, optimized performance, and dependable automation to build applications that are maintainable, scalable, and production ready."
               </p>
             </div>
           </motion.div>
