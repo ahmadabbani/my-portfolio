@@ -133,10 +133,10 @@ const Projects = () => {
         >
           <h1 className="section-title projects-title">Showcase</h1>
           <p className="projects-paragraph">
-            A curated selection of my work demonstrating expertise in full-stack
-            development, modern UI implementation, scalable backend
-            architecture, and seamless workflow automation. Click through to
-            view project details, technical stacks, and live deployments.
+            A selection of my work showcasing full-stack development, modern UI
+            implementation, scalable backend architecture, and workflow
+            automation. Explore project details, technologies used, and live
+            deployments.
           </p>
           <Link to="/projects" className="cta-button">
             View All Projects

@@ -6,6 +6,32 @@ import ProjectModal from "../components/sections/ProjectModal";
 // --- DATA ---
 const projectsData = [
   {
+    id: 23,
+    title: "TenMiles Agency",
+    category: "Customized Shopify",
+    fullDesc: `Built a fully customized Shopify website for TenMiles, a marketing agency, designed to showcase the brand, services, and portfolio through a modern and interactive digital experience.
+
+The website was developed locally using Shopify CLI with custom Shopify Liquid theme development, creating a unique storefront beyond standard Shopify limitations. It features advanced animations, interactive 3D models, and dynamic UI dashboards designed to present agency results, case studies, and services in an engaging and professional way.
+
+Integrated Google Calendly into the website with a customized embedded booking experience, allowing visitors to schedule meetings directly within the site through a branded interface instead of being redirected to an external page. The service and portfolio sections were built with custom layouts, visual storytelling, animated dashboards, and interactive elements to deliver a premium agency experience combining modern design, advanced functionality, and seamless user interaction.`,
+    stack: ["shopify.png", "liquid.png", "calendly.png"],
+    image: "tenmiles0.jpg",
+    liveUrl: "https://tenmilesagency.com",
+  },
+  {
+    id: 22,
+    title: "We Are Monarc",
+    category: "shopify ecommerce",
+    fullDesc: `Built a modern Shopify cosmetics eCommerce store fully customized from scratch, focusing on creating a premium shopping experience with a unique design and optimized user interface.
+
+The theme was developed locally using Shopify CLI with custom Shopify Liquid theme development, allowing full control over the storefront structure, layouts, and functionality beyond the limitations of the default editor. Custom homepage sections, advanced layouts, product page variants, and detailed UI components were designed and built from the ground up to achieve the quality and feel of a premium paid Shopify theme.
+
+The final result is a fully customized, polished, and scalable Shopify store with a professional design tailored specifically for the brand and its customers.`,
+    stack: ["shopify.png", "liquid.png"],
+    image: "monarc.jpg",
+    liveUrl: "https://wearemonarc.shop",
+  },
+  {
     id: 0,
     title: "Electric Power Solutions",
     category: "Web Application",
@@ -55,6 +81,19 @@ Powered by Supabase for backend services, authentication, and database managemen
     ],
     image: "mourachah00.png",
     liveUrl: "https://almourachah.org/",
+  },
+  {
+    id: 21,
+    title: "Mo Hamza Courses",
+    category: "Shopify Courses",
+    fullDesc: `Built a complete Shopify-based learning and services platform with a focus on creating a seamless customer journey from registration and course access to service booking and purchase management.
+
+The project involved advanced Shopify customization and local theme development using Shopify CLI, creating a modern user experience beyond the limitations of the default editor. Integrated Tevello for online course delivery and configured service booking workflows by connecting Calendly directly into the store experience, allowing users to schedule services, select available dates, and receive automated confirmations.
+
+Implemented advanced automation workflows using Shopify tools and apps, including customer communication, email sequences, booking reminders, abandoned checkout recovery, subscriber marketing campaigns, and personalized customer interactions. The entire ecosystem was structured to connect the storefront, courses, services, and automation systems into a smooth and scalable eCommerce experience.`,
+    stack: ["shopify.png", "liquid.png", "calendly.png", "tevello.png"],
+    image: "mh.jpg",
+    liveUrl: "https://mohamza.me/",
   },
   {
     id: 3,

@@ -40,9 +40,10 @@ const Contact = () => {
             <h1 className="contact-title">Ready to collaborate?</h1>
 
             <p className="contact-paragraph">
-              Whether you need robust full-stack development, seamless
-              automation workflows, or insightful data integration, let's
-              discuss how my expertise can power your next business.
+              Have an idea, a project, or an existing solution that needs
+              improvement? Let's connect and explore the right approach to turn
+              your requirements into a practical, scalable, and well-built
+              digital experience.
             </p>
 
             <div className="contact-button-wrapper">

@@ -35,6 +35,11 @@ const infraSkills = [
     icons: ["cloudh.png", "cloudwhite.png"],
   },
   {
+    name: "CMS & eCommerce Platforms (WordPress / Shopify)",
+    level: 85,
+    icons: ["shopify.png", "wordpress.png"],
+  },
+  {
     name: "Task Automation (n8n / AI / Chatbot APIs)",
     level: 70,
     icons: ["n8n1.png", "ai.png"],
@@ -95,7 +100,11 @@ const SkillBar = ({ skill }) => {
 
 const Skills = () => {
   // Paragraph condensed for technical focus
-  const technicalSummary = ` I build web applications with React and Next.js, integrating secure authentication (JWT, Supabase Auth..). I work with PostgreSQL, MongoDB, and Supabase, develop APIs with Node.js, deploy apps on Vercel/Netlify.. and automate workflows using n8n. I have strong experience in data-driven development, including data processing, dashboarding, and extracting insights from large datasets. I also handle basic IT support, including troubleshooting, device setup, and networking.`;
+  const technicalSummary = `Building web applications beyond development, with focus on scalable, secure, and maintainable systems. This includes architecture planning, hosting, deployment, infrastructure, security, performance optimization, and creating flexible solutions that can be easily managed and expanded. Selecting the right technologies and services based on each project's requirements.
+
+Managing complete eCommerce solutions beyond the storefront, including platform configuration, integrations, automation, marketing workflows, SEO optimization, and the tools needed to operate and grow online businesses.
+
+Applying data-driven approaches through data processing, dashboards, analytics, and transforming information into insights that improve digital solutions and decisions.`;
   return (
     <section id="skills" className="skills-section">
       <motion.div

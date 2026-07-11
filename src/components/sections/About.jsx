@@ -47,17 +47,25 @@ const About = () => {
             variants={columnVariants("left")}
           >
             <p>
-              I build complete web applications with a focus on creating smooth,
-              secure, and reliable experiences. My work covers both frontend and
-              backend development, including user authentication, database
-              management, and deployment on cloud platforms.
+              I build complete web applications focused on creating modern,
+              intuitive, and reliable digital experiences. My work covers
+              frontend and backend development, including UI/UX design,
+              application architecture, database management, API integrations,
+              automation, and cloud deployment to deliver secure and
+              high-performing solutions.
             </p>
             <p>
-              I also work on automation for background tasks and other
-              processes, and I work with a variety of databases and data
-              sources. I have strong experience in data analytics, creating
-              dashboards, analyzing information, and using insights to help make
-              better decisions and improve application features.
+              I also specialize in eCommerce platforms (Shopify and WordPress),
+              managing complete online stores through customization, payment
+              and shipping setup, app and plugin integrations, email
+              automation, SEO, performance optimization, and the tools needed
+              to operate and grow online businesses.
+            </p>
+            <p>
+              I have strong experience with databases, data sources, and
+              analytics, creating dashboards, analyzing information, and using
+              insights to improve applications and support better business
+              decisions.
             </p>
           </motion.div>
 
@@ -69,7 +77,9 @@ const About = () => {
             <div className="about-widget glass-panel">
               <span className="widget-label">Core Value</span>
               <p className="widget-quote">
-                "I emphasize clean system architecture, optimized performance, and dependable automation to build applications that are maintainable, scalable, and production ready."
+                Clean code, efficient architecture, and reliable systems are at
+                the core of my work, ensuring applications remain scalable,
+                maintainable, and ready for real-world use.
               </p>
             </div>
           </motion.div>
