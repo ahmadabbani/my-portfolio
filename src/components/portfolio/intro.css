@@ -91,7 +91,7 @@ html:has(.portfolio) { position: relative; scroll-behavior: smooth; }
   .portfolio #dp-main { scroll-margin-top: 84px; }
   .pv-desktop-nav, .pv-header-contact { display: none; }
   .pv-header-inner { min-height: 84px; gap: 20px; }
-  .pv-menu-toggle { display: inline-flex; align-items: center; gap: 14px; border: 0; background: none; padding: 12px 0 12px 12px; font-size: 14px; }
+  .pv-menu-toggle { display: inline-flex; align-items: center; justify-content: flex-end; min-width: 44px; min-height: 44px; border: 0; background: none; padding: 12px 0 12px 12px; }
   .pv-menu-icon { width: 24px; display: flex; flex-direction: column; gap: 6px; }
   .pv-menu-icon i { height: 1px; width: 100%; background: var(--dp-ink); }
   .pv-menu-icon i:last-child { width: 70%; margin-left: auto; background: var(--dp-accent); }

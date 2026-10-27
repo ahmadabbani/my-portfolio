@@ -77,7 +77,7 @@ export default function Header({ homePath = "" }) {
             {navigation.map((link, index) => <HomeLink key={link.href} homePath={homePath} href={link.href} className="pv-nav-link"><span className="pv-nav-index" aria-hidden="true">0{index + 1}</span><span className="pv-nav-text"><span>{link.label}</span><span aria-hidden="true">{link.label}</span></span></HomeLink>)}
           </nav>
           <a href="#dp-contact" className="pv-header-contact">Let's talk <FiArrowUpRight aria-hidden="true" /></a>
-          <button type="button" className="pv-menu-toggle" aria-label="Open navigation" aria-haspopup="dialog" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}><span>Menu</span><span className="pv-menu-icon" aria-hidden="true"><i /><i /></span></button>
+          <button type="button" className="pv-menu-toggle" aria-label="Open navigation" aria-haspopup="dialog" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}><span className="pv-menu-icon" aria-hidden="true"><i /><i /></span></button>
         </div>
       </Motion.header>
       {menuOpen && <MobileNavigation onClose={() => setMenuOpen(false)} homePath={homePath} />}
