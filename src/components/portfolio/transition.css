@@ -1,0 +1,62 @@
+.pt-route-content { display: flow-root; }
+.pt-route-content #dp-main:focus { outline: none; }
+
+/* A temporary stage, present only while travelling between pages. */
+.pt-curtain { position: fixed; inset: 0; z-index: 9999; visibility: hidden; pointer-events: none; }
+.pt-curtain[data-active] { visibility: visible; pointer-events: auto; }
+html[data-portfolio-transition] { --pt-direction: 1; }
+html[data-portfolio-transition="home"] { --pt-direction: -1; }
+html[data-portfolio-transition]::view-transition {
+  background: #080a08;
+  background-image: linear-gradient(112deg, transparent 36%, var(--orange, #E85002) 36.1%, var(--orange, #E85002) 63.9%, transparent 64%);
+  perspective: 1800px;
+  pointer-events: auto;
+}
+html[data-portfolio-transition]::view-transition-group(root) {
+  animation: none;
+  overflow: visible;
+}
+html[data-portfolio-transition]::view-transition-image-pair(root) { isolation: auto; perspective: 1800px; }
+html[data-portfolio-transition]::view-transition-old(root),
+html[data-portfolio-transition]::view-transition-new(root) {
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  mix-blend-mode: normal;
+  backface-visibility: hidden;
+  transform-origin: center;
+  animation-duration: 1320ms;
+  animation-timing-function: cubic-bezier(.65, 0, .22, 1);
+  animation-fill-mode: both;
+}
+html[data-portfolio-transition]::view-transition-old(root) { animation-name: pt-page-out; z-index: 2; }
+html[data-portfolio-transition]::view-transition-new(root) { animation-name: pt-page-in; z-index: 3; }
+
+@keyframes pt-page-out {
+  0% { transform: translate3d(0, 0, 0) rotateY(0) scale(1); opacity: 1; border-radius: 0; box-shadow: none; }
+  23% { transform: translate3d(calc(-3% * var(--pt-direction)), 0, -100px) rotateY(calc(10deg * var(--pt-direction))) scale(.9); opacity: 1; border-radius: 14px; box-shadow: 0 0 0 2px var(--orange, #E85002), 14px 22px 70px #0009; }
+  66% { transform: translate3d(calc(-76% * var(--pt-direction)), 0, -260px) rotateY(calc(62deg * var(--pt-direction))) scale(.8); opacity: .85; border-radius: 14px; }
+  100% { transform: translate3d(calc(-120% * var(--pt-direction)), 0, -320px) rotateY(calc(76deg * var(--pt-direction))) scale(.78); opacity: 0; border-radius: 14px; }
+}
+@keyframes pt-page-in {
+  0%, 23% { transform: translate3d(calc(115% * var(--pt-direction)), 0, -300px) rotateY(calc(-64deg * var(--pt-direction))) scale(.8); opacity: 1; border-radius: 14px; box-shadow: 0 0 0 2px var(--orange, #E85002), -14px 22px 70px #0009; }
+  68% { transform: translate3d(calc(16% * var(--pt-direction)), 0, -100px) rotateY(calc(-14deg * var(--pt-direction))) scale(.91); opacity: 1; border-radius: 14px; box-shadow: 0 0 0 2px var(--orange, #E85002), -14px 22px 70px #0009; }
+  100% { transform: translate3d(0, 0, 0) rotateY(0) scale(1); opacity: 1; border-radius: 0; box-shadow: none; }
+}
+
+/* A full-page 3D fallback keeps the same visual language without the snapshot API. */
+html[data-portfolio-fallback] .portfolio { position: relative; z-index: 1; will-change: transform, opacity; }
+html[data-portfolio-fallback] body {
+  background: #080a08;
+  background-image: linear-gradient(112deg, transparent 36%, var(--orange, #E85002) 36.1%, var(--orange, #E85002) 63.9%, transparent 64%);
+  background-attachment: fixed;
+}
+@media (max-width: 600px) {
+  html[data-portfolio-transition]::view-transition { perspective: 1000px; }
+  html[data-portfolio-transition]::view-transition-image-pair(root) { perspective: 1000px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pt-curtain { display: none; }
+  html[data-portfolio-transition]::view-transition-old(root),
+  html[data-portfolio-transition]::view-transition-new(root) { animation: none; }
+}

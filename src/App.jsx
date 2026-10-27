@@ -1,53 +1,29 @@
-import React from "react";
-// 1. Import routing components
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import "./global.css";
-
-// Home Page Sections
-import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact"; // This is the Contact CTA
-
-// 2. Import the new dedicated page component
-import ContactPage from "./pages/ContactPage";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
+import PageTransition from "./components/portfolio/PageTransition";
+import PortfolioLayout from "./components/portfolio/PortfolioLayout";
 
-// Component representing the entire Home Page structure (All Sections)
-const HomeLayout = () => (
-  <main className="app-wrapper">
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact /> {/* The Contact CTA section */}
-  </main>
-);
+function LegacyRedirect({ to, fallbackHash = "" }) {
+  const { search, hash } = useLocation();
+  return <Navigate to={{ pathname: to, search, hash: hash || fallbackHash }} replace />;
+}
 
-function App() {
+export default function App() {
   return (
-    // 3. Wrap the application in the Router
     <BrowserRouter>
-      <div className="app-container">
-        <Header /> {/* Header is persistent */}
-        {/* 4. Define the routes to switch the main content */}
-        <Routes>
-          {/* Route for the Home Page (all sections) */}
-          <Route path="/" element={<HomeLayout />} />
-
-          {/* Route for the Dedicated Contact Page */}
-          <Route path="/contact" element={<ContactPage />} />
-          {/* Route for the Dedicated Projects Page */}
-          <Route path="/projects" element={<ProjectsPage />} />
+      <PageTransition>{location => (
+        <Routes location={location}>
+          <Route path="/" element={<PortfolioLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+          </Route>
+          <Route path="/design-preview" element={<LegacyRedirect to="/" />} />
+          <Route path="/design-preview/projects" element={<LegacyRedirect to="/projects" />} />
+          <Route path="/contact" element={<LegacyRedirect to="/" fallbackHash="#dp-contact" />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer /> {/* Footer is persistent */}
-      </div>
+      )}</PageTransition>
     </BrowserRouter>
   );
 }
-
-export default App;

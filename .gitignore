@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deployment metadata and private local artifacts
+.vercel/
+output/
+tmp/

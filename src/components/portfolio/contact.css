@@ -1,0 +1,41 @@
+.pc-section { border-top: 1px solid var(--dp-line); padding-block: clamp(40px, 3.5vw, 130px) clamp(80px, 7vw, 250px); }
+.pc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: clamp(40px, 4.2vw, 155px); }
+.pc-eyebrow { color: var(--dp-muted); font-size: clamp(11px, .8vw, 26px); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.portfolio .pc-top p { max-width: 37ch; color: var(--dp-muted); font-size: clamp(15px, 1vw, 34px); line-height: 1.7; }
+.portfolio .pc-section h2 { font-size: clamp(46px, 6.7vw, 244px); font-weight: 500; line-height: 1.1; letter-spacing: -.065em; }
+.pc-section h2 > span { color: var(--dp-muted); }
+.pc-email { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: clamp(24px, 3vw, 110px); align-items: center; padding-block: clamp(36px, 3.4vw, 120px) clamp(26px, 2.3vw, 86px); border-bottom: 1px solid var(--dp-line); }
+.pc-email::after { content: ''; position: absolute; inset: auto 0 -1px; height: 1px; background: var(--dp-accent); transform: scaleX(0); transform-origin: left; transition: transform .65s cubic-bezier(.22, 1, .36, 1); }
+.pc-email:hover::after, .pc-email:focus-visible::after { transform: scaleX(1); }
+.pc-email-label { grid-column: 1; margin-bottom: clamp(15px, 1.5vw, 52px); color: var(--dp-muted); font-size: clamp(12px, .85vw, 28px); }
+.pc-email-address { grid-column: 1; color: var(--dp-ink); font-size: clamp(24px, 5.2vw, 190px); line-height: 1.2; letter-spacing: -.055em; transition: color .3s; }
+.pc-email:hover .pc-email-address { color: var(--dp-accent); }
+.pc-email-arrow { grid-column: 2; grid-row: 1 / 3; display: grid; place-items: center; width: clamp(66px, 7.3vw, 264px); aspect-ratio: 1; border: 1px solid #5b624f; border-radius: 50%; color: var(--dp-accent); overflow: hidden; transition: background .35s, border-color .35s, color .35s; }
+.pc-email-arrow svg { width: 46%; height: 46%; stroke-width: 1.2; transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+.pc-email:hover .pc-email-arrow { background: var(--dp-accent); border-color: var(--dp-accent); color: var(--dp-paper); }
+.pc-email:hover .pc-email-arrow svg { transform: rotate(45deg); }
+.pc-bottom { display: flex; align-items: center; justify-content: flex-end; gap: clamp(22px, 2vw, 72px); padding-top: clamp(24px, 2vw, 74px); font-size: clamp(12px, .85vw, 29px); }
+.pc-bottom > span { color: var(--dp-muted); }
+.pc-bottom > a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.pc-bottom > a svg { color: var(--dp-accent); transition: transform .25s; }
+.pc-bottom > a:hover svg { transform: translate(3px, -3px); }
+@media (max-width: 900px) {
+  .pc-top { margin-bottom: 40px; }
+  .portfolio .pc-top p { max-width: 31ch; font-size: 15px; }
+  .portfolio .pc-section h2 { font-size: 6.7vw; }
+  .pc-email-address { font-size: 5.2vw; }
+}
+@media (max-width: 650px) {
+  .pc-section { padding-block: 28px 64px; }
+  .pc-top { flex-direction: column; gap: 24px; margin-bottom: 36px; }
+  .pc-eyebrow { font-size: 10px; }
+  .portfolio .pc-top p { max-width: 35ch; font-size: 15px; }
+  .portfolio .pc-section h2 { font-size: clamp(38px, 10vw, 64px); line-height: 1.12; }
+  .pc-section h2 > span { display: block; }
+  .pc-email { column-gap: 12px; padding-block: 34px 24px; }
+  .pc-email-label { font-size: 12px; margin-bottom: 16px; }
+  .pc-email-address { font-size: clamp(19px, 5.15vw, 33px); letter-spacing: -.06em; }
+  .pc-email-arrow { width: 46px; }
+  .pc-bottom { justify-content: space-between; gap: 14px; font-size: 12px; padding-top: 18px; }
+  .pc-bottom > a { gap: 7px; }
+}

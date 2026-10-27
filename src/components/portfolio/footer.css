@@ -1,0 +1,26 @@
+.pf-footer { background: #191c16; padding-block: clamp(44px, 4vw, 145px) clamp(18px, 1.8vw, 64px); border-top: 1px solid var(--dp-line); }
+.pf-main-nav { display: flex; align-items: center; justify-content: center; gap: clamp(30px, 4vw, 150px); padding-block: clamp(8px, .8vw, 28px); }
+.pf-main-nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding-bottom: .1em; font-size: clamp(42px, 4.5vw, 164px); line-height: 1.15; letter-spacing: -.055em; font-weight: 500; transition: color .25s; }
+.pf-main-nav a::after { content: ''; position: absolute; inset: auto 0 0; height: 1px; background: var(--dp-accent); transform: scaleX(0); transform-origin: right; transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
+.pf-main-nav a:hover, .pf-main-nav a:focus-visible { color: var(--dp-accent); }
+.pf-main-nav a:hover::after, .pf-main-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.pf-bottom { display: flex; justify-content: space-between; align-items: center; gap: clamp(24px, 3vw, 110px); border-top: 1px solid var(--dp-line); margin-top: clamp(36px, 4vw, 140px); padding-top: clamp(22px, 2vw, 74px); color: var(--dp-muted); font-size: clamp(11px, .8vw, 27px); }
+.pf-socials { display: flex; justify-self: end; gap: clamp(24px, 2.5vw, 90px); }
+.pf-socials a { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
+.pf-socials a svg { color: #7e8773; transition: color .25s, transform .25s; }
+.pf-socials a:hover { color: var(--dp-ink); }
+.pf-socials a:hover svg { color: var(--dp-accent); transform: translate(2px, -2px); }
+.portfolio #dp-main:focus { outline: none; }
+@media (max-width: 1100px) {
+  .pf-main-nav { gap: 4vw; }
+  .pf-main-nav a { font-size: 4.5vw; }
+  .pf-socials { gap: 22px; }
+}
+@media (max-width: 750px) {
+  .pf-footer { padding-top: 30px; }
+  .pf-main-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-items: center; gap: 14px 22px; padding-block: 0; }
+  .pf-main-nav a { font-size: clamp(28px, 8vw, 48px); }
+  .pf-bottom { flex-direction: column-reverse; align-items: stretch; margin-top: 28px; padding-top: 14px; gap: 14px; font-size: 11px; }
+  .pf-socials { justify-content: space-between; gap: 18px; }
+  .pf-socials a { gap: 5px; }
+}
