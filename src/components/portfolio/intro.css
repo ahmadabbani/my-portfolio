@@ -69,9 +69,16 @@ html:has(.portfolio) { position: relative; scroll-behavior: smooth; }
 .pv-mobile-top button { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--dp-line); background: none; width: 44px; height: 44px; }
 .pv-mobile-top button svg { font-size: 23px; }
 .pv-mobile-menu nav { display: flex; flex-direction: column; padding-block: 36px; }
-.pv-mobile-menu nav a { display: flex; align-items: center; gap: 18px; font-size: clamp(32px, 9vw, 55px); letter-spacing: -.055em; padding-block: 13px; }
+.pv-mobile-menu nav a { display: flex; align-items: center; gap: 18px; font-size: clamp(32px, 9vw, 55px); letter-spacing: -.055em; padding-block: 13px; transition: color .2s; }
+.pv-mobile-link-label { position: relative; transition: transform .3s cubic-bezier(.22, 1, .36, 1); }
+.pv-mobile-link-label::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.22, 1, .36, 1); }
+.pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) { color: var(--dp-accent); }
+.pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) .pv-mobile-link-label { transform: translateX(6px); }
+.pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) .pv-mobile-link-label::after { transform: scaleX(1); }
+.pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) svg { transform: translate(3px, -3px); }
+.pv-mobile-menu nav a:is(:active, [data-pressed="true"]), .pv-mobile-menu nav a:is(:active, [data-pressed="true"]) .pv-mobile-link-label, .pv-mobile-menu nav a:is(:active, [data-pressed="true"]) .pv-mobile-link-label::after, .pv-mobile-menu nav a:is(:active, [data-pressed="true"]) svg { transition-duration: 0s; }
 .pv-menu-index { font-size: 12px; color: var(--dp-accent); letter-spacing: 0; }
-.pv-mobile-menu nav svg { margin-left: auto; font-size: .7em; color: var(--dp-accent); }
+.pv-mobile-menu nav svg { margin-left: auto; font-size: .7em; color: var(--dp-accent); transition: transform .3s cubic-bezier(.22, 1, .36, 1); }
 .pv-mobile-bottom { border-top: 1px solid var(--dp-line); display: flex; flex-direction: column; gap: 20px; padding-top: 24px; color: var(--dp-muted); font-size: 13px; }
 .pv-mobile-bottom a:last-child { display: inline-flex; gap: 10px; align-items: center; }
 @keyframes pv-scroll-cue { 0%, 65%, 100% { transform: translateY(0); } 78% { transform: translateY(140%); } 79% { transform: translateY(-140%); } }
@@ -132,6 +139,7 @@ html:has(.portfolio) { position: relative; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html:has(.portfolio) { scroll-behavior: auto; }
   .portfolio .pv-title-mask > span { will-change: auto; }
+  .pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) .pv-mobile-link-label, .pv-mobile-menu nav a:is(:hover, :focus-visible, :active, [data-pressed="true"]) svg { transform: none; }
 }
 
 .pv-intro-arrow { color: var(--dp-accent); font-size: clamp(38px, 3vw, 100px); line-height: 1; margin-bottom: clamp(20px, 1.7vw, 60px); }

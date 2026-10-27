@@ -17,6 +17,8 @@ function HomeLink({ homePath, href, ...props }) {
 function MobileNavigation({ onClose, homePath }) {
   const dialogRef = useRef(null);
   const reduceMotion = useReducedMotion();
+  const [pressedHref, setPressedHref] = useState(null);
+  const clearPressed = () => setPressedHref(null);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -47,8 +49,11 @@ function MobileNavigation({ onClose, homePath }) {
           <Motion.div key={link.href}
             initial={reduceMotion ? false : { y: 28, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
             transition={{ delay: reduceMotion ? 0 : 0.12 + index * 0.07, duration: 0.5 }}>
-            <HomeLink homePath={homePath} href={link.href} onClick={onClose}>
-            <span className="pv-menu-index">0{index + 1}</span>{link.label}<FiArrowUpRight aria-hidden="true" />
+            <HomeLink homePath={homePath} href={link.href} onClick={onClose}
+              data-pressed={pressedHref === link.href || undefined}
+              onPointerDown={() => setPressedHref(link.href)} onPointerUp={clearPressed}
+              onPointerCancel={clearPressed} onPointerLeave={clearPressed}>
+            <span className="pv-menu-index">0{index + 1}</span><span className="pv-mobile-link-label">{link.label}</span><FiArrowUpRight aria-hidden="true" />
             </HomeLink>
           </Motion.div>
         ))}
